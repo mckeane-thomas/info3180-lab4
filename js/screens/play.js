@@ -25,3 +25,4 @@ game.PlayScreen = me.ScreenObject.extend({
 		me.game.world.removeChild(this.HUD);
 	}
 });
+ 
