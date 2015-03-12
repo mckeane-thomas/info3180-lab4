@@ -3,8 +3,11 @@ game.PlayScreen = me.ScreenObject.extend({
 	 *  action to perform on state change
 	 */
 	onResetEvent: function() {	
-	
-		// load a level
+		
+		// play the audio track
+		me.audio.playTrack("DST-InertExponent");
+		
+        // load a level
 		me.levelDirector.loadLevel("area01");
 		
 		// reset the score
@@ -13,7 +16,6 @@ game.PlayScreen = me.ScreenObject.extend({
 		// add our HUD to the game world
 		this.HUD = new game.HUD.Container();
 		me.game.world.addChild(this.HUD);
-		
 	},
 	
 	
@@ -25,4 +27,3 @@ game.PlayScreen = me.ScreenObject.extend({
 		me.game.world.removeChild(this.HUD);
 	}
 });
- 
